@@ -1,0 +1,12 @@
+numpy~=1.18.5
+osmium~=3.0.1
+setproctitle~=1.1.10
+tqdm~=4.48.2
+pandas~=1.1.1
+nodevectors~=0.1.22
+haversine~=2.3.0
+joblib~=0.16.0
+fasttext~=0.9.2
+numba~=0.51.2
+csrgraph~=0.1.22
+scipy~=1.5.2
