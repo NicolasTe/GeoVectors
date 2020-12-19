@@ -65,7 +65,7 @@ python3 Encoder.py ./snapshots ./embeddings_tags ./models/fasttext --model fastt
  
  3. Run the NLE embedding model:
  ```
- python3 Encoder.py ./snapshots ./embeddings_tags ./models/nle --model nle --db_cred db.ini
+ python3 Encoder.py ./snapshots ./embeddings_nle ./models/nle --model nle --db_cred db.ini
  ```
 
 
