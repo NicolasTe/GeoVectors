@@ -56,7 +56,7 @@ optional arguments:
 
 
 
-1. Download the specifc OpenStreetMap snapshot you want to encode, e.g., from [https://download.geofabrik.de/](https://download.geofabrik.de/). We recommend using the osm.pbf format.
+1. Download the specific OpenStreetMap snapshot you want to encode, e.g., from [https://download.geofabrik.de/](https://download.geofabrik.de/). We recommend using the osm.pbf format.
 
 2. Run the tag embedding model:
  ```
