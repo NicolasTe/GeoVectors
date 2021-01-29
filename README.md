@@ -56,7 +56,7 @@ optional arguments:
 
 
 
-1. Download the specifc OpenStreetMap snapshot you want to encode, e.g., from [https://download.geofabrik.de/](https://download.geofabrik.de/). We recommend using the osm.pbf format.
+1. Download the specific OpenStreetMap snapshot you want to encode, e.g., from [https://download.geofabrik.de/](https://download.geofabrik.de/). We recommend using the osm.pbf format.
 
 2. Run the tag embedding model:
  ```
@@ -65,7 +65,7 @@ python3 Encoder.py ./snapshots ./embeddings_tags ./models/fasttext --model fastt
  
  3. Run the NLE embedding model:
  ```
- python3 Encoder.py ./snapshots ./embeddings_tags ./models/nle --model nle --db_cred db.ini
+ python3 Encoder.py ./snapshots ./embeddings_nle ./models/nle --model nle --db_cred db.ini
  ```
 
 
