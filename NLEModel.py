@@ -190,7 +190,7 @@ class NLEModel(BaseModel):
 
                 if key == other_key:
                     continue
-                dist = n[1]
+                dist = (1 / n[1])
                 dist_sum += dist
 
                 node_enc = self.wdw.predict(other_key)

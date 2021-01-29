@@ -9,7 +9,16 @@ from argparse import Namespace
 """
 This file contains multiple utility functions.
 """
+def read_samples(path):
+    names = ['country', 'id', 'type', 'tags', 'lat', 'lon']
+    dtypes = { 'country': 'object', 'id': 'int64',
+               'type': 'object', 'tags': 'object', 'lat': 'float64', 'lon': 'float64'}
+    data = pd.read_csv(path, sep='\t', names=names, dtype=dtypes)
 
+    # drop duplicates from overlapping datasets
+    data = data.sort_values(["id", "type", "lat", "lon"], na_position='last')
+    data = data.drop_duplicates(subset=['id', 'type'], keep='first')
+    return data
 
 def read_db_config(path):
     result = Namespace()
