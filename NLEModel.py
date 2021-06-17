@@ -186,11 +186,14 @@ class NLEModel(BaseModel):
 
             dist_sum = 0
             for n in nearest_neighbors:
+                #other_key = n.object
                 other_key = n[0]
 
                 if key == other_key:
                     continue
-                dist = (1 / n[1])
+
+                #use distance in kilometers
+                dist = np.log(1 + (1 / (n[1] / 1000)))
                 dist_sum += dist
 
                 node_enc = self.wdw.predict(other_key)
@@ -198,7 +201,6 @@ class NLEModel(BaseModel):
 
             enc = np.sum(vectors, axis=0) / dist_sum
             return enc
-
     def _get_nn(self, x, y, n):
         result = []
         point = "public.st_setsrid(public.st_makepoint("+str(x)+", "+str(y)+"), 4326)"
