@@ -22,19 +22,14 @@ cd GeoVectors
 pip install -r requirements.txt
 ```
 
-3. Download the pretrained models
+3. Download the pretrained model
 ```
 cd models/fasttext
 ./download.sh
-cd ../nle
-./download.sh
-```
-4. Setup the Postgres Database
-```
-psgql < geovectors_nle.sql
+
 ```
 
-5. 
+4. 
 Adjust the database credentials in the db.ini file.
 
 # Usage
